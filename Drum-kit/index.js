@@ -18,8 +18,11 @@ document.addEventListener("keydown", function(event){
 
 
 function addAnimation(key){
+    var button = document.querySelector("."+key);
 
-    document.querySelector("."+key).classList.add("pressed");
+    if (!button) return;
+
+    button.classList.add("pressed");
 
     setTimeout(function(){
         document.querySelector("."+key).classList.remove("pressed");
